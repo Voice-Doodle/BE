@@ -1,0 +1,102 @@
+spring:
+
+  # multipart
+  servlet:
+    multipart:
+      max-file-size: 5MB
+      max-request-size: 5MB
+
+  # database
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: ENC(03fMyrVFdNjxum02PftZYKcGjtYWB72gxALgYaRga3hrGVaVim602nGHKIxcSmPVzFhbmR1/HvYgwHj8K7sQ1MXrbUIwLIRyOu7jM8Z+uIT7kTNTZrDn0GRi9pyL2ZISiW5jKYNPG9Q+2cTiJ6IRMg==)
+    username: ENC(M4jaZqWjVcaGxh6IMa2tUA==)
+    password: ENC(iuI5JAKh61WCtgI+ycuhlw==)
+
+    # hikari
+    hikari:
+      maximum-pool-size: 10
+      connection-timeout: 5000
+      connection-init-sql: SELECT 1
+      validation-timeout: 2000
+      minimum-idle: 10
+      idle-timeout: 600000
+      max-lifetime: 1800000
+
+  # redis
+  data:
+    redis:
+      host: ENC(J8LByYaJQBRwN7pyhVkBakI6zu0bxW1n)
+      port: ENC(8qRRIHujxFGk/xN9CORmDQ==)
+
+  # jpa
+  jpa:
+    hibernate:
+      ddl-auto: none
+    properties:
+      hibernate:
+        jdbc:
+          time_zone: Asia/Seoul
+        format_sql: true
+        show_sql: true;
+    open-in-view: false
+
+  # jwt
+  jwt:
+    secret: ENC(0Z0P50zspDrX8AulBj2ts8bRuLpiidkxlqYPUu3Lo1Qme1upmXU9A46aehgAJcv1BMBX3UR0djyqIr6s2fzZCw==)
+
+  # hmac
+  hmac:
+    secret: ENC(7udXj2JZIot0lHv4nA5CJZeiv00aI8rJjTTX/PitNTpGBZP2IGPgzA==)
+
+  # AWS S3
+  cloud:
+    aws:
+      s3:
+        bucket: ENC(w13REsuS0o8tjstlxera7jPMXKssk0CK)
+        credentials:
+          access-key: ENC(86hjlbi9+cK8pvTJv6/k9QpmcevZ+5cKDXWZ8jNZzQw=)
+          secret-key: ENC(ZUi0c0/TD5GFhvt/OAWl6w7/lqXHMhC759SVi5hXEZzL5Q3Z948MgpDLIz53uokb7K24e6v6RmU=)
+      region:
+        static: ap-northeast-2
+
+      # EC2의 Spring Cloud 자동 구성 해제
+      stack:
+        auto: false
+
+      # CloudFront
+      cloud-front: ENC(3y3a+H0FmSpMuStWboErhunRJVjmr19moMNzpEh1TAam8ofipKLQXEJnaB16hhTK)
+
+  # log
+  logging.level:
+    org.hibernate.SQL: debug
+
+# Spring 문서
+springdoc:
+
+  # 스웨거
+  swagger-ui:
+
+    # Model 정렬 (내림차순)
+    groups-order: DESC
+
+server:
+  url: http://localhost:8081/api
+
+  port: 8081
+
+  ssl:
+    enabled: false
+
+  #서버 앤드포인트 설정
+  servlet:
+    context-path: ENC(R0gN00GLh1huMeVvJ6hNLA==)
+
+
+ai:
+  api:
+    url: ENC(xM5tFDZ8gCk7sYJaALnn13u5G2ZElUeTrV/Y6pdglNQ=)
+
+naver:
+  clientId: ENC(hL2L/8xOeTiXXqB2ixs7apjCtatiJGol)
+  clientSecret: ENC(RAniocJzj1B7buu30mwJK1odtVdJm3vev8kml+whZc0n2yvValuEPHl9hb79BfHGGkKfEPp875U=)
