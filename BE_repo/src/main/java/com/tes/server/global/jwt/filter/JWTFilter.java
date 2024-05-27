@@ -77,7 +77,6 @@ public class JWTFilter extends OncePerRequestFilter {
                             Response.fail(403, "유효하지 않은 AccessToken입니다.", "A-001")));
             response.setStatus(403);
             return;
-
         }
 
         // 토큰 가져오기
@@ -148,8 +147,7 @@ public class JWTFilter extends OncePerRequestFilter {
 
                 // 이전 refresh 토큰인지 확인
                 RefreshTokenDto getRefreshToken = refreshTokenRepository.findById(userCode).get();
-                System.out.println(refreshToken);
-                System.out.println(getRefreshToken.getRefreshToken());
+
                 if (!refreshToken.equals(getRefreshToken.getRefreshToken())) {
                     Map<String, String> result = new TreeMap<>();
                     result.put("msg", "유효하지 않은 Refresh 토큰");

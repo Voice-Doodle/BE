@@ -9,7 +9,7 @@ spring:
   # database
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: ENC(03fMyrVFdNjxum02PftZYKcGjtYWB72gxALgYaRga3hrGVaVim602nGHKIxcSmPVzFhbmR1/HvYgwHj8K7sQ1MXrbUIwLIRyOu7jM8Z+uIT7kTNTZrDn0GRi9pyL2ZISiW5jKYNPG9Q+2cTiJ6IRMg==)
+    url: ENC(chnfH7xftYW+SjEiH7Tbn56E4TjamTy1k6oT6NFezUDVOI+7CaiwfT1rXpyEwlMdfSqqJlXio1rnIWPoserDL14vtAUNUEnheaoj1Zsy9ZGMcLX4FYlsY9eVtuk0PqfPVtpTCd9K0yUaA65idYjjJA==)
     username: ENC(M4jaZqWjVcaGxh6IMa2tUA==)
     password: ENC(iuI5JAKh61WCtgI+ycuhlw==)
 
@@ -26,13 +26,13 @@ spring:
   # redis
   data:
     redis:
-      host: ENC(KHF47ojTDdlUA/asantg44CECweSdhGt)
+      host: ENC(Gkibq+Hw5TUve1qiMnzrJQeGUAFqkxUs)
       port: ENC(SgCoO9dYakGvtqFFCrgmjw==)
 
   # jpa
   jpa:
     hibernate:
-      ddl-auto: none
+      ddl-auto: create
     properties:
       hibernate:
         jdbc:
@@ -84,7 +84,7 @@ server:
 
 ai:
   api:
-    url: http://34.47.75.202
+    url: ENC(cIDl8C9sAVqda5kld9voz0wjm7+L1vgMKfo+IunHlrs=)
 
 naver:
   clientId: ENC(hL2L/8xOeTiXXqB2ixs7apjCtatiJGol)

@@ -13,5 +13,4 @@ public class BeRepoApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(BeRepoApplication.class, args);
 	}
-
 }
