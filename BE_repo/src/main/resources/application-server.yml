@@ -84,7 +84,7 @@ server:
 
 ai:
   api:
-    url: ENC(cIDl8C9sAVqda5kld9voz0wjm7+L1vgMKfo+IunHlrs=)
+    url: http://34.22.66.150
 
 naver:
   clientId: ENC(hL2L/8xOeTiXXqB2ixs7apjCtatiJGol)
