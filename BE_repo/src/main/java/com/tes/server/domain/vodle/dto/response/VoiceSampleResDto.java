@@ -7,12 +7,13 @@ import lombok.Getter;
 public class VoiceSampleResDto {
 
     private String voiceType;
-
+    private String voiceTypeKr;
     private String url;
 
     @Builder
-    public VoiceSampleResDto(String voiceType, String url) {
+    public VoiceSampleResDto(String voiceType, String voiceTypeKr,String url) {
         this.voiceType = voiceType;
+        this.voiceTypeKr = voiceTypeKr;
         this.url = url;
     }
 }

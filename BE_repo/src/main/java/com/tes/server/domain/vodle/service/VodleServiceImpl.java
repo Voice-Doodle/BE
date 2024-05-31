@@ -375,7 +375,7 @@ public class VodleServiceImpl implements VodleService {
     public List<VodleConversioinResDto> callConversionAsync(String gender, MultipartFile soundFile) {
 
         //목소리 타입리스트
-        List<String> voiceTypes = Arrays.asList("ahri", "mundo", "optimusPrime", "trump", "elsa");
+        List<String> voiceTypes = pitchRepository.findVoiceTypes();
 
         // 메서드들을 비동기로 실행후 반환데이터들을 담을 리스트
         List<CompletableFuture<VodleConversioinResDto>> futures = new ArrayList<>();
@@ -442,7 +442,7 @@ public class VodleServiceImpl implements VodleService {
     @Override
     public List<VodleTtsResDto> callTtsAsync(VodleTtsReqDto vodleTtsReqDto) {
         //목소리 타입리스트
-        List<String> voiceTypes = Arrays.asList("ahri", "mundo", "optimusPrime", "trump", "elsa");
+        List<String> voiceTypes = pitchRepository.findVoiceTypes();
 
         // 메서드들을 비동기로 실행후 반환데이터들을 담을 리스트
         List<CompletableFuture<VodleTtsResDto>> futures = new ArrayList<>();
@@ -546,6 +546,7 @@ public class VodleServiceImpl implements VodleService {
             List<PitchEntity> voices = pitchRepository.findAll();
             List<VoiceSampleResDto> voiceSampleResDtos = voices.stream()
                     .map(voice -> VoiceSampleResDto.builder()
+                            .voiceTypeKr(voice.getVoiceTypeKr())
                             .voiceType(voice.getVoiceType())
                             .url(voice.getUrl())
                             .build())
