@@ -15,6 +15,9 @@ public class PitchEntity {
     @Column(name = "voiceType", nullable = false, unique = true)
     private String voiceType;
 
+    @Column(name = "voiceTypeKr", nullable = false, unique = true)
+    private String voiceTypeKr;
+
     @Column(name = "male", nullable = false)
     private Integer male;
 
