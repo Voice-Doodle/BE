@@ -101,7 +101,7 @@ https://youtu.be/6GsL7m1SSGc
 <br>
 <img src="https://img.shields.io/badge/nginx-009639?style=plastic&logo=nginx&logoColor=white"/>
 <img src="https://img.shields.io/badge/docker-2496ED?style=plastic&logo=docker&logoColor=white"/>
-<img src="https://img.shields.io/badge/jenkins-D24939?style=plastic&logo=jenkins&logoColor=white"/>\
+<img src="https://img.shields.io/badge/jenkins-D24939?style=plastic&logo=jenkins&logoColor=white"/>
 
 <br>
 <br>
